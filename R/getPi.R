@@ -1,6 +1,20 @@
 #' @export
 
 getPi <- function (P){
+
+    if(length(P[1,]) != length(P[,1])){     #check matrix dimension
+
+        stop('Matrix P must be squared: number of rows equal to the number o columns')
+
+    }
+
+    for(row in 1:length(P[,1])){
+        if(sum(P[row,])!=1){
+            stop('All rows in P must sum up to 1')
+        }
+    }
+
+
     n_states = length(P[1,])
 
     A = t(P)                            #transpose matrix
