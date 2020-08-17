@@ -1,0 +1,13 @@
+Package: getPi
+Type: Package
+Title: Give the Steady-State probability vector of a Makov Chain model
+Version: 0.1
+Date: 2020-08-16
+Author: MSc. Felipe Domingues Simoes
+Maintainer: Felipe Domingues Simoes <f.simoes@unesp.br>
+Description: Use function getPi to obtain the Steady-State probability vector of a Markov chain model using a transition probability matrix P. Matrix P must only have reccurent states of the Markov chain model.
+License: GPL-3
+Encoding: UTF-8
+RoxygenNote: 7.1.1
+Imports:
+    matlib
