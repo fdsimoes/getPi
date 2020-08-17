@@ -1,2 +1,2 @@
 # getPi
-R package to work with Markov Chain Staedy State probability vector.
+R package to work with Markov Chain Steady State probability vector.

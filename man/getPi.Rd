@@ -13,7 +13,7 @@ This function return the Steady-State probability vector of a Markov Chain Model
   \item{P}{\code{A square matrix in which every row sum up to 1.}}
 }
 \details{
-A Markov chain model with reccurent states and an aperiodic irreducible transition probability matrix P have a Steady-State vector $b$ such that $b=b P$. The function getPi return $b$ for a given matrix $P$.
+A Markov chain model with reccurent states and an aperiodic irreducible transition probability matrix P have a Steady-State vector b such that b=b.P. The function getPi return b for a given matrix P.
 }
 \value{
 %%  ~Describe the value returned
@@ -36,33 +36,8 @@ MSc. Felipe Domingues Simoes
 \code{\link{matlib}}
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
+getPi(matrix(c(0.8,0.5,0.2,0.5),2,2))
 
-## The function is currently defined as
-getPi <- function (P) 
-{
-    n_states = length(P[1,])
-
-    A = t(P)                            #transpose matrix
-
-    for(row in 1:n_states){               #canonical form
-        for(column in 1:n_states){
-            if(row == column){
-                A[row, column] = A[row, column]-1
-            }
-        }
-    }
-
-    B = rbind(A, rep(1, n_states))      #adding last equation
-
-    rhs = c(rep(0,n_states),1)          #Right hand side of the system
-
-    pi_vector = matlib::echelon(B, rhs)[1:n_states,n_states+1]
-
-    return(pi_vector)
-  }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

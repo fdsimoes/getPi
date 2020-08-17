@@ -29,6 +29,6 @@ Cinlar, E. (2013). Introduction to stochastic processes. Courier Corporation.
 \code{\link[matlib:matlib-package]{matlib}}
 }
 \examples{
-
+getPi(matrix(c(0.8,0.5,0.2,0.5),2,2))
 
 }

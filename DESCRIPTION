@@ -1,7 +1,7 @@
 Package: getPi
 Type: Package
 Title: Give the Steady-State probability vector of a Makov Chain model
-Version: 0.1
+Version: 0.1.1
 Date: 2020-08-16
 Author: MSc. Felipe Domingues Simoes
 Maintainer: Felipe Domingues Simoes <f.simoes@unesp.br>
